@@ -44,3 +44,9 @@ Using Exercise3 complete the following:
 - Export all the collections and save over the existing files
 - Create a new branch
 - Push
+
+## Exercide 6
+
+- Rebase your branch from the branch "Rebase_Test"
+- Fix any conflicts
+- Push 
