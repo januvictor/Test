@@ -45,7 +45,7 @@ Using Exercise3 complete the following:
 - Create a new branch
 - Push
 
-## Exercide 6
+## Exercise 6
 
 - Rebase your branch from the branch "Rebase_Test"
 - Fix any conflicts
