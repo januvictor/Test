@@ -1,18 +1,19 @@
 {
 	"info": {
-		"_postman_id": "db89915f-22b0-44fa-9198-3f38ee498849",
-		"name": "Exercise3",
+		"_postman_id": "8b36af75-a112-40e0-9d0d-a32ea9aca30f",
+		"name": "Exercise4",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Get_Locations",
+			"name": "Get a Quote id",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
-						"id": "d5be367e-00b0-4417-982a-3639f9bdf0ba",
+						"id": "8c48f369-a215-49ec-8501-ab73ea61dbab",
 						"exec": [
+							"",
 							""
 						],
 						"type": "text/javascript"
@@ -21,7 +22,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "dcd464f6-33bb-440a-b7ae-5aba42fb1648",
+						"id": "6f05f6c8-0176-45d1-b5e6-d968a50ddea8",
 						"exec": [
 							""
 						],
@@ -43,21 +44,75 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\n    \"destination_place_id\": \"{{destination_id}}\"\n}"
 				},
 				"url": {
-					"raw": "{{url_scheme}}://{{hostname}}/v1/locations/address-autocomplete",
+					"raw": "{{url_scheme}}://{{hostname}}/v1/quotes",
 					"protocol": "{{url_scheme}}",
 					"host": [
 						"{{hostname}}"
 					],
 					"path": [
 						"v1",
-						"locations",
-						"address-autocomplete"
+						"quotes"
 					]
 				},
-				"description": "Get a list of locations from a latitude and longitude and query-string"
+				"description": "Request a quote (ASAP)"
+			},
+			"response": []
+		},
+		{
+			"name": "Get a quote list",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c73f2cde-cfdb-4479-ba4d-8ecaf2386b22",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "fd88d6e1-09f8-4bb1-b67c-474a62d92774",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "authorization",
+						"value": "Bearer {{bearer_token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url_scheme}}://{{hostname}}/v1/quotes/{{id}}",
+					"protocol": "{{url_scheme}}",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"v1",
+						"quotes",
+						"{{id}}"
+					]
+				}
 			},
 			"response": []
 		}

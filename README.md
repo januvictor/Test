@@ -9,7 +9,7 @@ Exercise 1 to 3 should take no more then 1 hour. The last exercise should be tim
 ## Exercise 1 (Testing Postman part 1)
 The "Get Auth Token" POST call is missing data. Using the API docs located here (https://docs.karhoo.com/v1/auth#auth) complete the following exercise:
 - Git Clone this repo
-- Import Exercise2.postman_collection.json
+- Import Exercise1.postman_collection.json
 - Update the postman call to include the correct post parameters with the values of "interview_test@karhoo.com". The other parameter will be given on the day of the interview
 
 
@@ -17,6 +17,7 @@ The "Get Auth Token" POST call is missing data. Using the API docs located here 
 Using Exercise2 complete the following:
 
 - Update the "Get Auth Token" to save the value for "access_token" to a value called "bearer_token"
+- Import Exercise2.postman_collection.json
 - Update "Get_Locations" using the api docs here (https://docs.karhoo.com/v1/locations?shell#address-autocomplete) with the valid body
   - Body should json object 
   - the key will be "query"
@@ -33,7 +34,7 @@ Using Exercise2 complete the following:
 - Push it to your branch
 - Open a pull request and submit!
 
-## Exercise 4
+## Exercise 4 (Automation framework)
 
 - Using the site https://flit.tech and a framework of your choice:
   - Create a test scenario that navigates from the homepage to the karhoo team page
