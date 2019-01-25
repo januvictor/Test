@@ -1,0 +1,128 @@
+{
+	"id": "63d882a7-1fe3-4bad-8f31-51243ade3d4e",
+	"name": "Exercise2",
+	"allTests": [],
+	"timestamp": "2019-01-24T22:12:27.908Z",
+	"collection_id": "a104a48e-59ca-43d3-8903-50b5680773f5",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "a2c838fa-8712-4caa-aff8-41f9d16e5bd1",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "a104a48e-59ca-43d3-8903-50b5680773f5",
+		"name": "Exercise2",
+		"description": null,
+		"auth": null,
+		"events": null,
+		"variables": null,
+		"order": [
+			"21bdae67-bb73-46c1-a0d7-77c59a628262"
+		],
+		"folders_order": [],
+		"owner": "6062778",
+		"permissions": {},
+		"favorite": false,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "endpoint",
+			"value": "/api/register",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "email",
+			"value": "user",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "password",
+			"value": "pwd",
+			"description": "",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"name": "Get_Locations",
+			"id": "21bdae67-bb73-46c1-a0d7-77c59a628262",
+			"url": "https://rest.karhoo.com/v1/locations/address-autocomplete",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Status 201 is present",
+				"status": "pass",
+				"Response contains array": true
+			},
+			"testPassFailCounts": {
+				"Status 201 is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains array": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"162"
+			],
+			"allTests": [
+				{
+					"Status 201 is present": true,
+					"Response contains array": true
+				}
+			],
+			"time": "162",
+			"totalRequestTime": "162",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 2,
+	"totalFail": 0,
+	"totalTime": 162,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Get_Locations",
+			"id": "21bdae67-bb73-46c1-a0d7-77c59a628262",
+			"url": "https://rest.karhoo.com/v1/locations/address-autocomplete",
+			"time": "2019-01-24T22:12:27.908Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status 201 is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains array": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}

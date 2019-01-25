@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "716128bd-9348-4359-8399-58ea9054fe96",
+		"_postman_id": "a104a48e-59ca-43d3-8903-50b5680773f5",
 		"name": "Exercise2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -13,7 +13,14 @@
 					"script": {
 						"id": "d5be367e-00b0-4417-982a-3639f9bdf0ba",
 						"exec": [
-							""
+							"pm.test(\"Status 201 is present\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test('Response contains array', () => {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    var isArray = Array.isArray(jsonData.locations)\r",
+							"    pm.expect(isArray).to.eql(true);\r",
+							"})"
 						],
 						"type": "text/javascript"
 					}
@@ -38,18 +45,20 @@
 					},
 					{
 						"key": "authorization",
-						"value": "Bearer {{bearer_token}}"
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik5FTXlSREl3UmtaRE9FSTBOa05DTXpjMU1UVXpOa0ZFUmpZNVJqazJSRGt4TnprNFEwUkdNdyJ9.eyJodHRwczovL2thcmhvby5jb20vYXBwX21ldGFkYXRhIjp7InZlcnNpb24iOiIxLjAuMCIsInVzZXIiOnsia2FyaG9vX2lkIjoiMjE0OTY2MzktMWU4OC00NzRjLWFiNWQtODY2YjQzNzY1OTg5IiwiYXV0aDBfaWQiOiJhdXRoMHw1YzJkZDNkMDFiNTM4MjNiYWEyZjhmMGMiLCJwcm9maWxlIjp7ImZpcnN0X25hbWUiOiJUZWNoIiwibGFzdF9uYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBrYXJob28uY29tIiwicGhvbmUiOiIrNDQ3ODc5ODgxODgxIiwibG9jYWxlIjoiZW4tR0IifSwicHJpbWFyeV9vcmdhbmlzYXRpb24iOiI1ZmM0ZjMzYi0yODMyLTQ2NmUtOTk0My04NzI4NTg5ZWY3MjciLCJvcmdhbmlzYXRpb25zIjp7IjVmYzRmMzNiLTI4MzItNDY2ZS05OTQzLTg3Mjg1ODllZjcyNyI6eyJuYW1lIjoiRGVmYXVsdE9yZ0Zvckthcmhvb0FwcFVzZXJzIiwicm9sZXMiOlsiTE9DQVRJT05TX0FETUlOIiwiVVNFUiJdfX19fSwiaXNzIjoiaHR0cHM6Ly9rYXJob28tcHJvZHVjdGlvbi5ldS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWMyZGQzZDAxYjUzODIzYmFhMmY4ZjBjIiwiYXVkIjoiaHR0cHM6Ly9yZXN0Lmthcmhvby5jb20iLCJpYXQiOjE1NDgzNjQ3NTgsImV4cCI6MTU0ODM2ODM1OCwiYXpwIjoidEdyNlBjcVJINDAwS2dEazhTWUI0TTdId0cyRDhUbWwiLCJzY29wZSI6Im9mZmxpbmVfYWNjZXNzIiwiZ3R5IjoicGFzc3dvcmQifQ.MNMy6WjR4_9cHb7SKC64u_-Q3Nfoti9GBfB3iDgFKfy3p0EdyO13aCxyrYqrurfZAWxzXxHB98jWdxbd1zQiiGo8qbp_OFQyt3DKMGyEluqY72tvDQbOUGp-9f_2w9nxhKqP10psavd0tvVr6LZyU8gxC2KCBpsZnmmfsczzAtw9VrkDNlu9hpmgIQwj9XGARo1Lcwy_mH6HfoIlLlWAgm7Mk7IRL-A3KrX_ssyLyUILPCR-lkUjQ6UwbawLn8MA2uws3nzVMfjFWHDda8T4r_4-QQltAhI813KTZuSx0X6W13gtoGHK_wKxfIBXuX8_XugSClkkYKviNl6VDA54dg"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\r\n  \"query\": \"London\",\r\n  \"position\": {\r\n    \"latitude\": 51.47,\r\n    \"longitude\": 0.4543\r\n  }\r\n}"
 				},
 				"url": {
-					"raw": "{{url_scheme}}://{{hostname}}/v1/locations/address-autocomplete",
-					"protocol": "{{url_scheme}}",
+					"raw": "https://rest.karhoo.com/v1/locations/address-autocomplete",
+					"protocol": "https",
 					"host": [
-						"{{hostname}}"
+						"rest",
+						"karhoo",
+						"com"
 					],
 					"path": [
 						"v1",

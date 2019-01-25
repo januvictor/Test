@@ -1,0 +1,128 @@
+{
+	"id": "282c92db-663f-4f5f-bb53-ffb1171e9b9c",
+	"name": "Exercise1",
+	"allTests": [],
+	"timestamp": "2019-01-24T21:23:48.945Z",
+	"collection_id": "9eb4d77d-2aa8-4377-b00a-87cd3526b9a2",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "a2c838fa-8712-4caa-aff8-41f9d16e5bd1",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "9eb4d77d-2aa8-4377-b00a-87cd3526b9a2",
+		"name": "Exercise1",
+		"description": null,
+		"auth": null,
+		"events": null,
+		"variables": null,
+		"order": [
+			"333f7983-1fba-4590-985e-d71f25c6c03c"
+		],
+		"folders_order": [],
+		"owner": "6062778",
+		"permissions": {},
+		"favorite": false,
+		"shared": false,
+		"type": "collection",
+		"depth": 0
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [
+		{
+			"key": "endpoint",
+			"value": "/api/register",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "email",
+			"value": "user",
+			"description": "",
+			"enabled": true
+		},
+		{
+			"key": "password",
+			"value": "pwd",
+			"description": "",
+			"enabled": true
+		}
+	],
+	"results": [
+		{
+			"name": "Get Auth Token",
+			"id": "333f7983-1fba-4590-985e-d71f25c6c03c",
+			"url": "https://rest.karhoo.com/v1/auth/token",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"error": null,
+				"name": "Status 201 is present",
+				"status": "pass",
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status 201 is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"237"
+			],
+			"allTests": [
+				{
+					"Status 201 is present": true,
+					"Content-Type is present": true
+				}
+			],
+			"time": "237",
+			"totalRequestTime": "237",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 2,
+	"totalFail": 0,
+	"totalTime": 237,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "Get Auth Token",
+			"id": "333f7983-1fba-4590-985e-d71f25c6c03c",
+			"url": "https://rest.karhoo.com/v1/auth/token",
+			"time": "2019-01-24T21:23:48.945Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {
+				"Status 201 is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}

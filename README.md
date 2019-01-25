@@ -38,3 +38,9 @@ The "Get_Location" POST call from Exercise2.postman_collection is failing. Using
   - Clicks the apply button
   - Checks that you are on the bamboohr vacancies page
   - Once completed push into the github branch
+
+## Exercise 6
+
+- Rebase your branch from the branch "Rebase_Test"
+- Fix any conflicts and make sure it works
+- Push 

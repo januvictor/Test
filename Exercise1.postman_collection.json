@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6a5d9277-4a9e-4527-804c-17aaeed70b30",
+		"_postman_id": "9eb4d77d-2aa8-4377-b00a-87cd3526b9a2",
 		"name": "Exercise1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -47,13 +47,15 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": ""
+					"raw": "{\r\n  \"username\": \"test@karhoo.com\",\r\n  \"password\": \"Password1234!\"\r\n}"
 				},
 				"url": {
-					"raw": "{{url_scheme}}://{{hostname}}/v1/auth/token",
-					"protocol": "{{url_scheme}}",
+					"raw": "https://rest.karhoo.com/v1/auth/token",
+					"protocol": "https",
 					"host": [
-						"{{hostname}}"
+						"rest",
+						"karhoo",
+						"com"
 					],
 					"path": [
 						"v1",
@@ -121,6 +123,87 @@
 					],
 					"cookie": [],
 					"body": "{\n  \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik9UQXpOalV5TWpNeVFUTTBSVFF4TjBORVF6TXlOak0zTlRRNE56TXpORFk0TkRneE1USXpNdyJ9.eyJodHRwczovL2thcmhvby5jb20vYXBwX21ldGFkYXRhIjp7InJvbGVzIjp7IkFHRU5UIjp0cnVlLCJQUklWQVRFX0FDQ0VTUyI6dHJ1ZX0sImZsZWV0X2FjY2VzcyI6eyJMSVZFIjp0cnVlfX0sImlzcyI6Imh0dHBzOi8va2FyaG9vLXN0YWdpbmcuZXUuYXV0aDAuY29tLyIsInN1YiI6ImF1dGgwfDVhMjkyZGJkZmQxYTMzMjEzNTA0YjQ1YiIsImF1ZCI6Imh0dHBzOi8vcmVzdC5zdGcua2FyaG9vLm5ldCIsImlhdCI6MTUxMzAwNjU1NCwiZXhwIjoxNTEzMDkyOTU0LCJhenAiOiI0Qjh3NTVVbU5sZDVDa3Nsdkp5TXA3cnZjMTVOT3hlMSIsInNjb3BlIjoib2ZmbGluZV9hY2Nlc3MiLCJndHkiOiJwYXNzd29yZCJ9.n_IdWbOIYgVv0_5d9fOMQP08Vk65XPdvNhTF_vhrUTjpobnw1lPBBWPEaKopnh2tdFSa9qOLdDxnBV7r2p3kulGub0vs4u8KRconrznBTdr7Ygu-mbsjQxV0-rxq2zSSZbm1ycCxRw8angOBnZDoPSvg3qw2CUW47kQM9QLnyLvWYopR4r6S8n-JUmqDPSE7m_dBqYwYcxVo1hoccf4yNgCXLksuQX2z6ZUVEPQSmUBCFG1ETAUqqEr_YSxulEn3VPktedY1SK8uStea0E9oLlgHWG4854uuC8qpr1MFKfGBsGORMHbg1IOts-5OUQA8XEi9LDsdfIIcpKCRrVKBKg\",\n  \"expires_in\": 86400,\n  \"refresh_token\": \"0f7rOE3fN5mY-CozD3SnePyJQPdq3Tzo2DepTiekyentM\"\n }"
+				},
+				{
+					"name": "Get Auth Token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"test@karhoo.com\",\r\n  \"password\": \"Password1234!\"\r\n}"
+						},
+						"url": {
+							"raw": "https://rest.karhoo.com/v1/auth/token",
+							"protocol": "https",
+							"host": [
+								"rest",
+								"karhoo",
+								"com"
+							],
+							"path": [
+								"v1",
+								"auth",
+								"token"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 24 Jan 2019 21:19:18 GMT"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Trace-Id",
+							"value": "4fa5aad283ce4065fb999597348e04ca"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1125"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6Ik5FTXlSREl3UmtaRE9FSTBOa05DTXpjMU1UVXpOa0ZFUmpZNVJqazJSRGt4TnprNFEwUkdNdyJ9.eyJodHRwczovL2thcmhvby5jb20vYXBwX21ldGFkYXRhIjp7InZlcnNpb24iOiIxLjAuMCIsInVzZXIiOnsia2FyaG9vX2lkIjoiMjE0OTY2MzktMWU4OC00NzRjLWFiNWQtODY2YjQzNzY1OTg5IiwiYXV0aDBfaWQiOiJhdXRoMHw1YzJkZDNkMDFiNTM4MjNiYWEyZjhmMGMiLCJwcm9maWxlIjp7ImZpcnN0X25hbWUiOiJUZWNoIiwibGFzdF9uYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBrYXJob28uY29tIiwicGhvbmUiOiIrNDQ3ODc5ODgxODgxIiwibG9jYWxlIjoiZW4tR0IifSwicHJpbWFyeV9vcmdhbmlzYXRpb24iOiI1ZmM0ZjMzYi0yODMyLTQ2NmUtOTk0My04NzI4NTg5ZWY3MjciLCJvcmdhbmlzYXRpb25zIjp7IjVmYzRmMzNiLTI4MzItNDY2ZS05OTQzLTg3Mjg1ODllZjcyNyI6eyJuYW1lIjoiRGVmYXVsdE9yZ0Zvckthcmhvb0FwcFVzZXJzIiwicm9sZXMiOlsiTE9DQVRJT05TX0FETUlOIiwiVVNFUiJdfX19fSwiaXNzIjoiaHR0cHM6Ly9rYXJob28tcHJvZHVjdGlvbi5ldS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWMyZGQzZDAxYjUzODIzYmFhMmY4ZjBjIiwiYXVkIjoiaHR0cHM6Ly9yZXN0Lmthcmhvby5jb20iLCJpYXQiOjE1NDgzNjQ3NTgsImV4cCI6MTU0ODM2ODM1OCwiYXpwIjoidEdyNlBjcVJINDAwS2dEazhTWUI0TTdId0cyRDhUbWwiLCJzY29wZSI6Im9mZmxpbmVfYWNjZXNzIiwiZ3R5IjoicGFzc3dvcmQifQ.MNMy6WjR4_9cHb7SKC64u_-Q3Nfoti9GBfB3iDgFKfy3p0EdyO13aCxyrYqrurfZAWxzXxHB98jWdxbd1zQiiGo8qbp_OFQyt3DKMGyEluqY72tvDQbOUGp-9f_2w9nxhKqP10psavd0tvVr6LZyU8gxC2KCBpsZnmmfsczzAtw9VrkDNlu9hpmgIQwj9XGARo1Lcwy_mH6HfoIlLlWAgm7Mk7IRL-A3KrX_ssyLyUILPCR-lkUjQ6UwbawLn8MA2uws3nzVMfjFWHDda8T4r_4-QQltAhI813KTZuSx0X6W13gtoGHK_wKxfIBXuX8_XugSClkkYKviNl6VDA54dg\",\n    \"expires_in\": 3600,\n    \"refresh_token\": \"y0baqngyzVMmv2fyxXtm6dVmcVrF6GHYhggOXqvbB6ces\"\n}"
 				}
 			]
 		}
